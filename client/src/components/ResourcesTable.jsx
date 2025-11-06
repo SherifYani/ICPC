@@ -1,56 +1,64 @@
-import React, { useState } from 'react';
-import { ExternalLink, Search, Filter } from 'lucide-react';
+import React, { useState } from "react";
+import { ExternalLink, Search, Filter, BookOpen } from "lucide-react";
 
 export default function ResourcesTable({ resources = [] }) {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [filterType, setFilterType] = useState('all');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [filterType, setFilterType] = useState("all");
 
   const filteredResources = resources.filter(resource => {
-    const matchesSearch = resource.topic.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesFilter = filterType === 'all' || resource.type === filterType;
+    const matchesSearch = resource.topic
+      .toLowerCase()
+      .includes(searchTerm.toLowerCase());
+    const matchesFilter = filterType === "all" || resource.type === filterType;
     return matchesSearch && matchesFilter;
   });
 
-  const getTypeColor = (type) => {
+  const getTypeColor = type => {
     const colors = {
-      'Video': 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400',
-      'Slides': 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400',
-      'Article': 'bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400',
-      'Tool': 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400',
+      Video:
+        "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 border-red-300 dark:border-red-700",
+      Slides:
+        "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 border-blue-300 dark:border-blue-700",
+      Article:
+        "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400 border-purple-300 dark:border-purple-700",
+      Tool: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 border-green-300 dark:border-green-700",
     };
-    return colors[type] || 'bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-400';
+    return (
+      colors[type] ||
+      "bg-gray-100 text-gray-700 dark:bg-gray-900/30 dark:text-gray-400 border-gray-300 dark:border-gray-700"
+    );
   };
 
-  const getTypeIcon = (type) => {
+  const getTypeIcon = type => {
     const icons = {
-      'Video': '🎥',
-      'Slides': '📊',
-      'Article': '📄',
-      'Tool': '🛠️',
+      Video: "",
+      Slides: "",
+      Article: "",
+      Tool: "",
     };
-    return icons[type] || '📌';
+    return icons[type] || "";
   };
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       {/* Search and Filter */}
-      <div className="flex flex-col md:flex-row gap-3">
-        <div className="flex-1 relative">
-          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-muted-foreground" />
+      <div className="flex flex-col md:flex-row gap-4">
+        <div className="flex-1 relative group">
+          <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
           <input
             type="text"
             placeholder="Search resources..."
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-            className="w-full pl-10 pr-4 py-2 rounded-lg border border-border bg-background text-foreground placeholder-muted-foreground focus:outline-none focus:ring-2 focus:ring-accent"
+            onChange={e => setSearchTerm(e.target.value)}
+            className="modern-select w-full pl-12"
           />
         </div>
-        <div className="flex items-center gap-2">
-          <Filter className="w-4 h-4 text-muted-foreground" />
+        <div className="relative group select-wrapper">
+          <Filter className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground pointer-events-none" />
           <select
             value={filterType}
-            onChange={(e) => setFilterType(e.target.value)}
-            className="px-4 py-2 rounded-lg border border-border bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-accent"
+            onChange={e => setFilterType(e.target.value)}
+            className="modern-select pl-12"
           >
             <option value="all">All Types</option>
             <option value="Video">Videos</option>
@@ -62,64 +70,121 @@ export default function ResourcesTable({ resources = [] }) {
       </div>
 
       {/* Table */}
-      <div className="overflow-x-auto rounded-lg border border-border">
-        <table className="w-full">
-          <thead>
-            <tr className="bg-accent/10 border-b border-border">
-              <th className="px-6 py-4 text-left text-sm font-semibold text-accent">Topic</th>
-              <th className="px-6 py-4 text-left text-sm font-semibold text-accent">Type</th>
-              <th className="px-6 py-4 text-left text-sm font-semibold text-accent">Description</th>
-              <th className="px-6 py-4 text-center text-sm font-semibold text-accent">Link</th>
-            </tr>
-          </thead>
-          <tbody>
-            {filteredResources.length > 0 ? (
-              filteredResources.map((resource, idx) => (
-                <tr
-                  key={idx}
-                  className="border-b border-border hover:bg-accent/5 transition-colors duration-200 group"
-                >
-                  <td className="px-6 py-4 text-sm font-medium text-foreground">
-                    <div className="flex items-center gap-2">
-                      <span className="text-lg">{getTypeIcon(resource.type)}</span>
-                      {resource.topic}
+      <div className="overflow-hidden rounded-xl border-2 border-border shadow-lg">
+        <div className="overflow-x-auto">
+          <table className="w-full">
+            <thead>
+              <tr
+                className="border-b-2 border-border"
+                style={{
+                  background:
+                    "linear-gradient(135deg, rgba(0, 229, 255, 0.08), rgba(255, 170, 0, 0.08))",
+                }}
+              >
+                <th className="px-6 py-4 text-left text-sm font-bold gradient-text">
+                  Topic
+                </th>
+                <th className="px-6 py-4 text-left text-sm font-bold gradient-text">
+                  Type
+                </th>
+                <th className="px-6 py-4 text-left text-sm font-bold gradient-text">
+                  Description
+                </th>
+                <th className="px-6 py-4 text-center text-sm font-bold gradient-text">
+                  Action
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              {filteredResources.length > 0 ? (
+                filteredResources.map((resource, idx) => (
+                  <tr
+                    key={idx}
+                    className="border-b border-border hover:bg-primary/5 transition-all duration-300 group"
+                  >
+                    <td className="px-6 py-4 text-sm font-medium text-foreground">
+                      <div className="flex items-center gap-3">
+                        <span className="text-2xl group-hover:scale-110 transition-transform">
+                          {getTypeIcon(resource.type)}
+                        </span>
+                        <span className="group-hover:text-primary transition-colors font-semibold">
+                          {resource.topic}
+                        </span>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 text-sm">
+                      <span
+                        className={`px-3 py-1.5 rounded-full text-xs font-bold border ${getTypeColor(resource.type)} group-hover:scale-105 transition-transform inline-block`}
+                      >
+                        {resource.type}
+                      </span>
+                    </td>
+                    <td className="px-6 py-4 text-sm text-muted-foreground max-w-md">
+                      <p className="line-clamp-2 group-hover:text-foreground transition-colors">
+                        {resource.description}
+                      </p>
+                    </td>
+                    <td className="px-6 py-4 text-center">
+                      <a
+                        href={resource.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-primary/10 text-primary hover:bg-primary hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-3"
+                        style={{
+                          boxShadow: "0 0 0 0 rgba(var(--icpc-teal-rgb), 0.5)",
+                        }}
+                        onMouseEnter={e => {
+                          e.currentTarget.style.boxShadow =
+                            "var(--shadow-glow-teal)";
+                        }}
+                        onMouseLeave={e => {
+                          e.currentTarget.style.boxShadow =
+                            "0 0 0 0 rgba(var(--icpc-teal-rgb), 0.5)";
+                        }}
+                      >
+                        <ExternalLink className="w-5 h-5" />
+                      </a>
+                    </td>
+                  </tr>
+                ))
+              ) : (
+                <tr>
+                  <td
+                    colSpan="4"
+                    className="px-6 py-12 text-center text-muted-foreground"
+                  >
+                    <div className="flex flex-col items-center gap-3">
+                      <BookOpen className="w-12 h-12 text-muted-foreground/30" />
+                      <p className="font-medium">
+                        No resources found matching your search.
+                      </p>
                     </div>
                   </td>
-                  <td className="px-6 py-4 text-sm">
-                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${getTypeColor(resource.type)}`}>
-                      {resource.type}
-                    </span>
-                  </td>
-                  <td className="px-6 py-4 text-sm text-muted-foreground max-w-xs truncate">
-                    {resource.description}
-                  </td>
-                  <td className="px-6 py-4 text-center">
-                    <a
-                      href={resource.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center justify-center w-8 h-8 rounded-lg bg-accent/10 text-accent hover:bg-accent hover:text-white transition-all duration-300 group-hover:scale-110"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                    </a>
-                  </td>
                 </tr>
-              ))
-            ) : (
-              <tr>
-                <td colSpan="4" className="px-6 py-8 text-center text-muted-foreground">
-                  No resources found matching your search.
-                </td>
-              </tr>
-            )}
-          </tbody>
-        </table>
+              )}
+            </tbody>
+          </table>
+        </div>
       </div>
 
       {/* Results count */}
-      <p className="text-sm text-muted-foreground">
-        Showing {filteredResources.length} of {resources.length} resources
-      </p>
+      <div className="flex items-center justify-between px-2">
+        <p className="text-sm text-muted-foreground font-medium">
+          Showing{" "}
+          <span className="font-bold text-primary">
+            {filteredResources.length}
+          </span>{" "}
+          of{" "}
+          <span className="font-bold text-secondary">{resources.length}</span>{" "}
+          resources
+        </p>
+        {filteredResources.length > 0 && (
+          <div className="flex items-center gap-2 text-sm text-muted-foreground">
+            <BookOpen className="w-4 h-4 text-primary" />
+            <span className="font-medium">Explore & Learn!</span>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

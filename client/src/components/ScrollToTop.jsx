@@ -29,14 +29,23 @@ export default function ScrollToTop() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className="fixed bottom-8 right-8 z-40 flex items-center justify-center w-12 h-12 rounded-full transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2 dark:focus:ring-offset-background animate-slideInRight"
+          className="fixed bottom-8 right-8 z-50 flex items-center justify-center w-14 h-14 rounded-xl transition-all duration-300 hover:scale-110 focus:outline-none animate-slideInRight group"
           style={{
             background: "var(--gradient-button)",
-            boxShadow: "var(--shadow-teal)",
+            boxShadow: "var(--shadow-glow-yellow)",
           }}
           aria-label="Scroll to top"
         >
-          <ArrowUp className="w-5 h-5 text-white" />
+          <ArrowUp className="w-6 h-6 text-white group-hover:animate-bounce-soft" />
+
+          {/* Pulse ring effect */}
+          <div
+            className="absolute inset-0 rounded-xl animate-pulse-glow"
+            style={{
+              background: "var(--gradient-button)",
+              opacity: 0.3,
+            }}
+          />
         </button>
       )}
     </>
