@@ -15,7 +15,7 @@ export const weeksData = [
   },
   {
     id: 1,
-    title: "Fundamentals of C++ Programming",
+    title: "Fundamentals of C++ ",
     description: "Learn the basics of C++ syntax and data types",
     fullDescription:
       "Explore the essentials of C++ programming. We'll cover key topics such as basic syntax, data types & variables, operators, input/output operations, error handling, and comments.",

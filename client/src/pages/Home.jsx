@@ -206,45 +206,6 @@ export default function Home() {
                   Explore Problems
                 </button>
               </div>
-
-              {/* Stats Bar */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 max-w-3xl mx-auto">
-                {stats.map((stat, index) => (
-                  <div
-                    key={index}
-                    className="glass-card p-6 rounded-2xl hover:scale-105 transition-all duration-300 group cursor-pointer"
-                    style={{
-                      animationDelay: `${index * 0.1}s`,
-                    }}
-                  >
-                    <div className="flex flex-col items-center gap-2">
-                      <div
-                        className="p-3 rounded-xl mb-2 group-hover:scale-110 transition-transform duration-300"
-                        style={{
-                          background: `linear-gradient(135deg, ${stat.color}15, ${stat.color}05)`,
-                          border: `1px solid ${stat.color}30`,
-                        }}
-                      >
-                        <stat.icon
-                          className="w-7 h-7"
-                          style={{ color: stat.color }}
-                        />
-                      </div>
-                      <div className="text-3xl font-bold gradient-text">
-                        {stat.value}
-                      </div>
-                      <div className="text-sm text-muted-foreground font-medium text-center">
-                        {stat.label}
-                      </div>
-                    </div>
-                    {/* Hover indicator */}
-                    <div
-                      className="mt-3 h-1 w-0 group-hover:w-full mx-auto rounded-full transition-all duration-300"
-                      style={{ background: stat.color }}
-                    />
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </section>
@@ -279,6 +240,44 @@ export default function Home() {
                 </select>
               </div>
             </div>
+          </div>
+          {/* Stats Bar */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-8 max-w-3xl mx-auto">
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className="glass-card p-6 rounded-2xl hover:scale-105 transition-all duration-300 group cursor-pointer"
+                style={{
+                  animationDelay: `${index * 0.1}s`,
+                }}
+              >
+                <div className="flex flex-col items-center gap-2">
+                  <div
+                    className="p-3 rounded-xl mb-2 group-hover:scale-110 transition-transform duration-300"
+                    style={{
+                      background: `linear-gradient(135deg, ${stat.color}15, ${stat.color}05)`,
+                      border: `1px solid ${stat.color}30`,
+                    }}
+                  >
+                    <stat.icon
+                      className="w-7 h-7"
+                      style={{ color: stat.color }}
+                    />
+                  </div>
+                  <div className="text-3xl font-bold gradient-text">
+                    {stat.value}
+                  </div>
+                  <div className="text-sm text-muted-foreground font-medium text-center">
+                    {stat.label}
+                  </div>
+                </div>
+                {/* Hover indicator */}
+                <div
+                  className="mt-3 h-1 w-0 group-hover:w-full mx-auto rounded-full transition-all duration-300"
+                  style={{ background: stat.color }}
+                />
+              </div>
+            ))}
           </div>
         </section>
 
