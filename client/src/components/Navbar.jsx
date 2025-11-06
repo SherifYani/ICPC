@@ -21,11 +21,19 @@ export default function Navbar() {
             />
             <div className="flex flex-col">
               <h1 className="text-white font-bold text-lg md:text-2xl tracking-tight">
+<<<<<<< HEAD
                 ICPC ANU Commmunity
               </h1>
               <div className="flex items-center gap-2">
                 <span className="text-xs md:text-sm text-gray-200 font-medium">
                   Level 0 Training
+=======
+                ICPC ANU
+              </h1>
+              <div className="flex items-center gap-2">
+                <span className="text-xs md:text-sm text-gray-200 font-medium">
+                  Level 0 Commmunity
+>>>>>>> 4a1d93501eafbbecc90bc3a748c0f3bc27f45696
                 </span>
                 <div
                   className="w-2 h-2 rounded-full animate-pulse"
