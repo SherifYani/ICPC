@@ -1,5 +1,14 @@
 import React, { useState } from "react";
-import { ExternalLink, Search, Filter, BookOpen } from "lucide-react";
+import { ExternalLink, Search, BookOpen } from "lucide-react";
+import ModernSelect from "./ModernSelect";
+
+const TYPE_OPTIONS = [
+  { value: "all", label: "All Types" },
+  { value: "Video", label: "Videos" },
+  { value: "Slides", label: "Slides" },
+  { value: "Documentation", label: "Documentation" },
+  { value: "Tool", label: "Tools" },
+];
 
 export default function ResourcesTable({ resources = [] }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -19,7 +28,7 @@ export default function ResourcesTable({ resources = [] }) {
         "bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400 border-red-300 dark:border-red-700",
       Slides:
         "bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400 border-blue-300 dark:border-blue-700",
-      Article:
+      Documentation:
         "bg-purple-100 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400 border-purple-300 dark:border-purple-700",
       Tool: "bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400 border-green-300 dark:border-green-700",
     };
@@ -33,7 +42,7 @@ export default function ResourcesTable({ resources = [] }) {
     const icons = {
       Video: "",
       Slides: "",
-      Article: "",
+      Documentation: "",
       Tool: "",
     };
     return icons[type] || "";
@@ -50,23 +59,16 @@ export default function ResourcesTable({ resources = [] }) {
             placeholder="Search resources..."
             value={searchTerm}
             onChange={e => setSearchTerm(e.target.value)}
-            className="modern-select w-full pl-12"
+            className="modern-select w-5xl pl-12"
           />
         </div>
-        <div className="relative group select-wrapper">
-          <Filter className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground pointer-events-none" />
-          <select
-            value={filterType}
-            onChange={e => setFilterType(e.target.value)}
-            className="modern-select pl-12"
-          >
-            <option value="all">All Types</option>
-            <option value="Video">Videos</option>
-            <option value="Slides">Slides</option>
-            <option value="Article">Articles</option>
-            <option value="Tool">Tools</option>
-          </select>
-        </div>
+        <ModernSelect
+          value={filterType}
+          onChange={setFilterType}
+          options={TYPE_OPTIONS}
+          label="Filter by Type"
+          placeholder="All Types"
+        />
       </div>
 
       {/* Table */}

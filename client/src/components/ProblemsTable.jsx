@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { ExternalLink, Search, Zap, Filter } from "lucide-react";
+import { ExternalLink, Search, Zap } from "lucide-react";
+import ModernSelect from "./ModernSelect";
+
+const SORT_OPTIONS = [
+  { value: "id", label: "Sort by ID" },
+  { value: "difficulty", label: "Sort by Difficulty" },
+];
 
 export default function ProblemsTable({ problems = [] }) {
   const [searchTerm, setSearchTerm] = useState("");
@@ -61,20 +67,16 @@ export default function ProblemsTable({ problems = [] }) {
             placeholder="Search problems by name or ID..."
             value={searchTerm}
             onChange={e => setSearchTerm(e.target.value)}
-            className="modern-select w-full pl-12"
+            className="modern-select w-5xl pl-12"
           />
         </div>
-        <div className="relative group select-wrapper">
-          <Filter className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-muted-foreground pointer-events-none" />
-          <select
-            value={sortBy}
-            onChange={e => setSortBy(e.target.value)}
-            className="modern-select pl-12"
-          >
-            <option value="id">Sort by ID</option>
-            <option value="difficulty">Sort by Difficulty</option>
-          </select>
-        </div>
+        <ModernSelect
+          value={sortBy}
+          onChange={setSortBy}
+          options={SORT_OPTIONS}
+          label="Sort Problems"
+          placeholder="Sort by..."
+        />
       </div>
 
       {/* Table */}
@@ -85,7 +87,8 @@ export default function ProblemsTable({ problems = [] }) {
               <tr
                 className="border-b-2 border-border"
                 style={{
-                  background: 'linear-gradient(135deg, rgba(0, 229, 255, 0.08), rgba(255, 170, 0, 0.08))',
+                  background:
+                    "linear-gradient(135deg, rgba(0, 229, 255, 0.08), rgba(255, 170, 0, 0.08))",
                 }}
               >
                 <th className="px-6 py-4 text-left text-sm font-bold gradient-text">
@@ -123,7 +126,9 @@ export default function ProblemsTable({ problems = [] }) {
                     </td>
                     <td className="px-6 py-4 text-sm">
                       <div className="flex items-center gap-2">
-                        <span className="text-lg">{getDifficultyIcon(problem.difficulty)}</span>
+                        <span className="text-lg">
+                          {getDifficultyIcon(problem.difficulty)}
+                        </span>
                         <span
                           className={`px-3 py-1.5 rounded-full text-xs font-bold border ${getDifficultyColor(problem.difficulty)} group-hover:scale-105 transition-transform`}
                         >
@@ -138,13 +143,15 @@ export default function ProblemsTable({ problems = [] }) {
                         rel="noopener noreferrer"
                         className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-secondary/10 text-secondary hover:bg-secondary hover:text-white transition-all duration-300 group-hover:scale-110 group-hover:rotate-3"
                         style={{
-                          boxShadow: '0 0 0 0 rgba(var(--anu-yellow-rgb), 0.5)',
+                          boxShadow: "0 0 0 0 rgba(var(--anu-yellow-rgb), 0.5)",
                         }}
-                        onMouseEnter={(e) => {
-                          e.currentTarget.style.boxShadow = 'var(--shadow-glow-yellow)';
+                        onMouseEnter={e => {
+                          e.currentTarget.style.boxShadow =
+                            "var(--shadow-glow-yellow)";
                         }}
-                        onMouseLeave={(e) => {
-                          e.currentTarget.style.boxShadow = '0 0 0 0 rgba(var(--anu-yellow-rgb), 0.5)';
+                        onMouseLeave={e => {
+                          e.currentTarget.style.boxShadow =
+                            "0 0 0 0 rgba(var(--anu-yellow-rgb), 0.5)";
                         }}
                       >
                         <ExternalLink className="w-5 h-5" />
@@ -160,7 +167,9 @@ export default function ProblemsTable({ problems = [] }) {
                   >
                     <div className="flex flex-col items-center gap-3">
                       <Zap className="w-12 h-12 text-muted-foreground/30" />
-                      <p className="font-medium">No problems found matching your search.</p>
+                      <p className="font-medium">
+                        No problems found matching your search.
+                      </p>
                     </div>
                   </td>
                 </tr>
@@ -173,8 +182,12 @@ export default function ProblemsTable({ problems = [] }) {
       {/* Results count */}
       <div className="flex items-center justify-between px-2">
         <p className="text-sm text-muted-foreground font-medium">
-          Showing <span className="font-bold text-primary">{sortedProblems.length}</span> of{" "}
-          <span className="font-bold text-secondary">{problems.length}</span> problems
+          Showing{" "}
+          <span className="font-bold text-primary">
+            {sortedProblems.length}
+          </span>{" "}
+          of <span className="font-bold text-secondary">{problems.length}</span>{" "}
+          problems
         </p>
         {sortedProblems.length > 0 && (
           <div className="flex items-center gap-2 text-sm text-muted-foreground">

@@ -372,37 +372,6 @@ body {
     );
   }
 
-  /* Select Wrapper for Icon */
-  .select-wrapper {
-    position: relative;
-    display: inline-block;
-  }
-
-  .select-wrapper::after {
-    content: "";
-    position: absolute;
-    right: 1.25rem;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 0;
-    height: 0;
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-top: 6px solid var(--muted-foreground);
-    pointer-events: none;
-    transition: all 0.3s ease;
-  }
-
-  .select-wrapper:hover::after {
-    border-top-color: var(--primary);
-    transform: translateY(-50%) scale(1.1);
-  }
-
-  .select-wrapper:has(select:focus)::after {
-    border-top-color: var(--primary);
-    transform: translateY(-40%) rotate(180deg);
-  }
-
   /* === Buttons === */
   .btn-primary {
     @apply px-8 py-4 rounded-xl font-semibold transition-all duration-400;
@@ -556,6 +525,8 @@ body {
   .dark .card {
     background: rgba(var(--icpc-teal-rgb), 0.04);
     border: 1px solid rgba(var(--icpc-teal-rgb), 0.15);
+    -webkit-backdrop-filter: blur(10px);
+    -moz-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
   }
 

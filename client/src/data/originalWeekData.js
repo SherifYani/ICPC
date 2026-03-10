@@ -8,7 +8,7 @@ export const weeksData = [
     fullDescription:
       "This week is all about introductions. We'll cover the basics of programming, competitive programming, and setting up the necessary tools.",
     videoCount: 8,
-    resourceCount: 12,
+    resourceCount: 9,
     problemCount: 0,
     resourcesLink:
       "https://github.com/sayedmostaf/ICPC-ANU-Community-Level-0-2025/wiki/Week-00-(Orientation-Week)",
@@ -19,8 +19,8 @@ export const weeksData = [
     description: "Learn the basics of C++ syntax and data types",
     fullDescription:
       "Explore the essentials of C++ programming. We'll cover key topics such as basic syntax, data types & variables, operators, input/output operations, error handling, and comments.",
-    videoCount: 15,
-    resourceCount: 18,
+    videoCount: 14,
+    resourceCount: 15,
     problemCount: 8,
     resourcesLink:
       "https://github.com/sayedmostaf/ICPC-ANU-Community-Level-0-2025/wiki/Week-01-(Fundamentals-of-Cpp-Programming)",
@@ -35,9 +35,9 @@ export const weeksData = [
     description: "Master conditional statements and decision-making",
     fullDescription:
       "Learn how to use if-else statements, switch cases, and logical operators to control program flow based on conditions.",
-    videoCount: 10,
-    resourceCount: 12,
-    problemCount: 8,
+    videoCount: 5,
+    resourceCount: 6,
+    problemCount: 18,
     resourcesLink:
       "https://github.com/sayedmostaf/ICPC-ANU-Community-Level-0-2025/wiki/Week-02-(Conditions)",
     wikiUrl:
@@ -51,9 +51,9 @@ export const weeksData = [
     description: "Understand loops and iteration",
     fullDescription:
       "Master for loops, while loops, do-while loops, and nested loops. Learn how to use loops to repeat code blocks efficiently.",
-    videoCount: 12,
-    resourceCount: 14,
-    problemCount: 10,
+    videoCount: 5,
+    resourceCount: 6,
+    problemCount: 26,
     resourcesLink:
       "https://github.com/sayedmostaf/ICPC-ANU-Community-Level-0-2025/wiki/Week-03-(Loops)",
     wikiUrl:
@@ -67,13 +67,29 @@ export const weeksData = [
     description: "Work with arrays and data structures",
     fullDescription:
       "Learn about single-dimensional and multi-dimensional arrays. Understand how to store, access, and manipulate collections of data.",
-    videoCount: 11,
-    resourceCount: 13,
-    problemCount: 9,
+    videoCount: 4,
+    resourceCount: 5,
+    problemCount: 26,
     resourcesLink:
       "https://github.com/sayedmostaf/ICPC-ANU-Community-Level-0-2025/wiki/Week-04-(Arrays)",
     wikiUrl:
       "https://raw.githubusercontent.com/wiki/sayedmostaf/ICPC-ANU-Community-Level-0-2025/Week-04-(Arrays).md",
+    additionalSheet: "https://vjudge.net/group/level_0_training_2026",
+    lectureSession: "https://www.youtube.com/@ICPCANU",
+  },
+  {
+    id: 5,
+    title: "Strings",
+    description: "Master string manipulation",
+    fullDescription:
+      "Learn to work with strings as a fundamental data structure. Topics include string operations, input/output techniques, and common string algorithms.",
+    videoCount: 5,
+    resourceCount: 7,
+    problemCount: 26,
+    resourcesLink:
+      "https://github.com/sayedmostaf/ICPC-ANU-Community-Level-0-2025/wiki/Week-05-(Strings)",
+    wikiUrl:
+      "https://raw.githubusercontent.com/wiki/sayedmostaf/ICPC-ANU-Community-Level-0-2025/Week-05-(Strings).md",
     additionalSheet: "https://vjudge.net/group/level_0_training_2026",
     lectureSession: "https://www.youtube.com/@ICPCANU",
   },
@@ -376,6 +392,131 @@ export const resourcesData = [
     description: "Full slides covering array concepts",
     link: "https://sayedmostaf.github.io/ICPC-ANU-Community-Level-0-2025/week-4/lecture/week4-slides.html",
   },
+  // Week 05 - Strings
+  {
+    weekId: 5,
+    topic: "String Basics",
+    type: "Video",
+    description: "Introduction to string data type and operations",
+    link: "https://www.youtube.com/watch?v=HOB-Ey3tEqY",
+  },
+  {
+    weekId: 5,
+    topic: "Char Arrays Fundamentals & String Basics",
+    type: "Video",
+    description:
+      "Char array basics: ASCII values, case conversion, null terminator, escape sequences, and string definitions",
+    link: "https://www.youtube.com/watch?v=GoqfS1m1BYo",
+  },
+  {
+    weekId: 5,
+    topic: "String Practice: Word Count, Frequency & Mapping",
+    type: "Video",
+    description:
+      "Practice: word counting, string concatenation, letter frequency analysis, and character mapping",
+    link: "https://youtu.be/rxKcqvbWkL0?si=GuAFdVF--UJ2GQj2",
+  },
+  {
+    weekId: 5,
+    topic: "String Homework Challenges & Applications",
+    type: "Video",
+    description:
+      "Challenges: prefix/suffix/substring/subsequence checks, conversion, grouping, compression, and comparison",
+    link: "https://www.youtube.com/watch?v=ZKE4VZHS9IY",
+  },
+  {
+    weekId: 5,
+    topic: "Week 5 Live Session Recording",
+    type: "Video",
+    description: "Full lecture recording with live coding, examples, and Q&A",
+    link: "https://www.youtube.com/live/RCz81Q8kDPU?si=WU61IdQg-ZuDTwjQ",
+  },
+  {
+    weekId: 5,
+    topic: "C++ String Reference",
+    type: "Documentation",
+    description:
+      "Official cplusplus.com reference for std::string class and methods",
+    link: "https://cplusplus.com/reference/string/string/",
+  },
+  {
+    weekId: 5,
+    topic: "Strings Slides",
+    type: "Slides",
+    description: "Complete lecture slides for Week 05",
+    link: "https://sayedmostaf.github.io/ICPC-ANU-Community-Level-0-2025/week-5/lecture/week5-slides.html",
+  },
+  // Week 06 - Functions (UPDATED LINKS)
+  // {
+  //   weekId: 6,
+  //   topic: "Function Introduction",
+  //   type: "Video",
+  //   description: "Why functions? Code reusability and organization",
+  //   link: "https://youtu.be/Gkg8NmfUCjg?si=lOpR6lZR-0ULfiLN",
+  // },
+  // {
+  //   weekId: 6,
+  //   topic: "Function Parameters",
+  //   type: "Video",
+  //   description: "Passing arguments to functions",
+  //   link: "https://youtu.be/MBvixzJw2sQ?si=FaiFxsP_g_IBBIbk",
+  // },
+  // {
+  //   weekId: 6,
+  //   topic: "Default Parameter Values",
+  //   type: "Video",
+  //   description: "Optional parameters with default values",
+  //   link: "https://youtu.be/qBojueEZxjs?si=dLTXYeOWA25K5lLX",
+  // },
+  // {
+  //   weekId: 6,
+  //   topic: "Passing Arrays to Functions",
+  //   type: "Video",
+  //   description: "How to pass arrays as function parameters",
+  //   link: "https://youtu.be/kApYul6wN3A?si=RN36I04NjCtYI68l",
+  // },
+  // {
+  //   weekId: 6,
+  //   topic: "Return Statement & Void",
+  //   type: "Video",
+  //   description: "Returning values and void functions",
+  //   link: "https://youtu.be/2NPd8KgneBQ?si=ZC8hK022RRiOpNrw",
+  // },
+  // {
+  //   weekId: 6,
+  //   topic: "Function Forward Declaration",
+  //   type: "Video",
+  //   description: "Declaring functions before definition",
+  //   link: "https://youtu.be/ErBDovJ3eTk?si=NmN6m_zWNydmXVtP",
+  // },
+  // {
+  //   weekId: 6,
+  //   topic: "Built-In Math Functions",
+  //   type: "Video",
+  //   description: "Using cmath library functions (pow, sqrt, abs, etc.)",
+  //   link: "https://youtu.be/wyFLcNCCaas?si=pmu3zHplw4YijMs1",
+  // },
+  // {
+  //   weekId: 6,
+  //   topic: "Function Overloading",
+  //   type: "Video",
+  //   description: "Multiple functions with same name, different parameters",
+  //   link: "https://youtu.be/I_AzDYyhlMU?si=H_st9zSMomaHchLL",
+  // },
+  // {
+  //   weekId: 6,
+  //   topic: "Function Recursion",
+  //   type: "Video",
+  //   description: "Functions calling themselves - base case & recursive case",
+  //   link: "https://youtu.be/djgs6PnNl2w?si=pXcwvWfWZPVi67nO",
+  // },
+  // {
+  //   weekId: 6,
+  //   topic: "Functions Slides",
+  //   type: "Slides",
+  //   description: "Complete lecture slides for Week 06",
+  //   link: "https://sayedmostaf.github.io/ICPC-ANU-Community-Level-0-2025/week-6/lecture/week6-slides.html",
+  // },
 ];
 
 // === PROBLEMS DATA Week 01 (Fundamentals of Cpp Programming) ===
@@ -859,5 +1000,260 @@ export const problemsDataWeek4 = [
     name: "Binary Search",
     difficulty: 4,
     link: "https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/Z",
+  },
+];
+// === PROBLEMS DATA (Week 05 - Strings) ===
+export const problemsDataWeek5 = [
+  // Source: https://codeforces.com/group/MWSDmqGsZm/contest/219856
+  {
+    id: "A",
+    name: "Create A New String",
+    difficulty: 1,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/A",
+  },
+  {
+    id: "B",
+    name: "Let's use Getline",
+    difficulty: 1,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/B",
+  },
+  {
+    id: "C",
+    name: "Compare",
+    difficulty: 1,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/C",
+  },
+  {
+    id: "D",
+    name: "Strings",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/D",
+  },
+  {
+    id: "E",
+    name: "Count",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/E",
+  },
+  {
+    id: "F",
+    name: "Way Too Long Words",
+    difficulty: 1,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/F",
+  },
+  {
+    id: "G",
+    name: "Conversion",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/G",
+  },
+  {
+    id: "H",
+    name: "Good or Bad",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/H",
+  },
+  {
+    id: "I",
+    name: "Palindrome",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/I",
+  },
+  {
+    id: "J",
+    name: "Count Letters",
+    difficulty: 1,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/J",
+  },
+  {
+    id: "K",
+    name: "I Love strings",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/K",
+  },
+  {
+    id: "L",
+    name: "String Functions",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/L",
+  },
+  {
+    id: "M",
+    name: "Subsequence String",
+    difficulty: 3,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/M",
+  },
+  {
+    id: "N",
+    name: "Max Subsequence",
+    difficulty: 3,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/N",
+  },
+  {
+    id: "O",
+    name: "Sort String",
+    difficulty: 3,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/O",
+  },
+  {
+    id: "P",
+    name: "Count Words",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/P",
+  },
+  {
+    id: "Q",
+    name: "Reverse Words",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/Q",
+  },
+  {
+    id: "R",
+    name: "String Score",
+    difficulty: 3,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/R",
+  },
+  {
+    id: "S",
+    name: "Max Split",
+    difficulty: 3,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/S",
+  },
+  {
+    id: "T",
+    name: "URL",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/T",
+  },
+  {
+    id: "U",
+    name: "New Words",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/U",
+  },
+  {
+    id: "V",
+    name: "Replace Word",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/V",
+  },
+  {
+    id: "W",
+    name: "Encrypt & Decrypt Message",
+    difficulty: 3,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/W",
+  },
+  {
+    id: "X",
+    name: "Comparison",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/X",
+  },
+  {
+    id: "Y",
+    name: "Min Cost String",
+    difficulty: 4,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/Y",
+  },
+  {
+    id: "Z",
+    name: "Clean Code",
+    difficulty: 3,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/219856/problem/Z",
+  },
+];
+
+// === PROBLEMS DATA (Week 06 - Functions) ===
+export const problemsDataWeek6 = [
+  // Source: https://codeforces.com/group/MWSDmqGsZm/contest/223205
+  {
+    id: "A",
+    name: "Add",
+    difficulty: 1,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/A",
+  },
+  {
+    id: "B",
+    name: "Print",
+    difficulty: 1,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/B",
+  },
+  {
+    id: "C",
+    name: "Wonderful Number",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/C",
+  },
+  {
+    id: "D",
+    name: "Prime Function",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/D",
+  },
+  {
+    id: "E",
+    name: "Swap",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/E",
+  },
+  {
+    id: "F",
+    name: "Equation",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/F",
+  },
+  {
+    id: "G",
+    name: "Max and MIN",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/G",
+  },
+  {
+    id: "H",
+    name: "N Times",
+    difficulty: 1,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/H",
+  },
+  {
+    id: "I",
+    name: "Swapping With Matrix",
+    difficulty: 3,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/I",
+  },
+  {
+    id: "J",
+    name: "Average",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/J",
+  },
+  {
+    id: "K",
+    name: "Shift Right",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/K",
+  },
+  {
+    id: "L",
+    name: "New Array",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/L",
+  },
+  {
+    id: "M",
+    name: "Distinct Numbers",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/M",
+  },
+  {
+    id: "N",
+    name: "Shift Zeros",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/N",
+  },
+  {
+    id: "O",
+    name: "Five in One",
+    difficulty: 3,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/O",
   },
 ];

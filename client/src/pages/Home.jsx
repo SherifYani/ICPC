@@ -1,8 +1,7 @@
-import React, { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo } from "react";
 import {
   BookOpen,
   Code,
-  Zap,
   Users,
   Trophy,
   Target,
@@ -10,11 +9,9 @@ import {
   Rocket,
   Globe,
   Heart,
-  ChevronDown,
 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import ScrollToTop from "@/components/ScrollToTop";
-import StatCard from "@/components/StatCard";
 import ResourcesTable from "@/components/ResourcesTable";
 import ProblemsTable from "@/components/ProblemsTable";
 import DashboardSection from "@/components/DashboardSection";
@@ -25,7 +22,9 @@ import {
   problemsDataWeek2,
   problemsDataWeek3,
   problemsDataWeek4,
+  problemsDataWeek5,
 } from "@/data/originalWeekData";
+import ModernSelect from "@/components/ModernSelect";
 import { FileText, Video } from "lucide-react";
 
 export default function Home() {
@@ -53,8 +52,10 @@ export default function Home() {
         return problemsDataWeek3;
       case 4:
         return problemsDataWeek4;
+      case 5:
+        return problemsDataWeek5;
       default:
-        return []; // Week 0 has no problems
+        return [];
     }
   }, [activeWeek.id]);
 
@@ -85,7 +86,16 @@ export default function Home() {
       color: "var(--anu-yellow)",
     },
   ];
+  const weekOptions = weeksData.map(week => ({
+    value: week.id,
+    label: `Week ${week.id}: ${week.title}`,
+  }));
 
+  const handleWeekChange = weekId => {
+    const selectedWeek = weeksData.find(w => w.id === weekId);
+    setActiveWeek(selectedWeek);
+    setActiveTab("overview");
+  };
   return (
     <div className="min-h-screen flex flex-col relative overflow-hidden">
       {/* Animated Background Elements */}
@@ -221,23 +231,12 @@ export default function Home() {
                 </span>
               </div>
               <div className="relative group select-wrapper">
-                <select
+                <ModernSelect
                   value={activeWeek.id}
-                  onChange={e => {
-                    const selectedWeek = weeksData.find(
-                      w => w.id === parseInt(e.target.value)
-                    );
-                    setActiveWeek(selectedWeek);
-                    setActiveTab("overview");
-                  }}
-                  className="modern-select"
-                >
-                  {weeksData.map(week => (
-                    <option key={week.id} value={week.id}>
-                      Week {week.id}: {week.title}
-                    </option>
-                  ))}
-                </select>
+                  onChange={handleWeekChange}
+                  options={weekOptions}
+                  label="Learning Weeks"
+                />
               </div>
             </div>
           </div>
@@ -282,7 +281,7 @@ export default function Home() {
         </section>
 
         {/* Tabs Navigation - Modern with Sticky */}
-        <section className="sticky top-[165px] z-40 backdrop-blur-xl border-b">
+        <section className="sticky top-[165px] backdrop-blur-xl border-b">
           <div
             className="absolute inset-0"
             style={{
