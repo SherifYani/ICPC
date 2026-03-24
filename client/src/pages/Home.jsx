@@ -23,13 +23,14 @@ import {
   problemsDataWeek3,
   problemsDataWeek4,
   problemsDataWeek5,
+  problemsDataWeek6,
 } from "@/data/originalWeekData";
 import ModernSelect from "@/components/ModernSelect";
 import { FileText, Video } from "lucide-react";
 
 export default function Home() {
   const [activeWeek, setActiveWeek] = useState(weeksData[0]);
-  const [activeTab, setActiveTab] = useState("overview");
+  const [activeTab, setActiveTab] = useState("resources");
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -54,6 +55,8 @@ export default function Home() {
         return problemsDataWeek4;
       case 5:
         return problemsDataWeek5;
+      case 6:
+        return problemsDataWeek6;
       default:
         return [];
     }
@@ -94,8 +97,22 @@ export default function Home() {
   const handleWeekChange = weekId => {
     const selectedWeek = weeksData.find(w => w.id === weekId);
     setActiveWeek(selectedWeek);
-    setActiveTab("overview");
+    setActiveTab("resources");
   };
+  const donts = dont =>
+    [...Array(20)].map((_, i) => (
+      <div
+        key={i}
+        className="absolute w-2 h-2 rounded-full opacity-40"
+        style={{
+          background: i % 2 === 0 ? "var(--icpc-teal)" : "var(--anu-yellow)",
+          top: `${Math.random() * 100}%`,
+          left: `${Math.random() * 100}%`,
+          animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
+          animationDelay: `${Math.random() * 2}s`,
+        }}
+      />
+    ));
   return (
     <div className="min-h-screen flex flex-col relative overflow-hidden">
       {/* Animated Background Elements */}
@@ -140,22 +157,7 @@ export default function Home() {
           />
 
           {/* Floating Particles */}
-          <div className="absolute inset-0 overflow-hidden">
-            {[...Array(20)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute w-2 h-2 rounded-full opacity-40"
-                style={{
-                  background:
-                    i % 2 === 0 ? "var(--icpc-teal)" : "var(--anu-yellow)",
-                  top: `${Math.random() * 100}%`,
-                  left: `${Math.random() * 100}%`,
-                  animation: `float ${3 + Math.random() * 4}s ease-in-out infinite`,
-                  animationDelay: `${Math.random() * 2}s`,
-                }}
-              />
-            ))}
-          </div>
+          <div className="absolute inset-0 overflow-hidden">{donts()}</div>
 
           <div className="container mx-auto px-4 relative z-10">
             <div
@@ -202,14 +204,26 @@ export default function Home() {
               {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
                 <button
-                  onClick={() => setActiveTab("overview")}
+                  onClick={() => {
+                    setActiveTab("resources");
+                    scrollTo({
+                      top: document.getElementById("content").offsetTop,
+                      behavior: "smooth",
+                    });
+                  }}
                   className="btn-primary group px-8 py-4 text-lg"
                 >
                   <Rocket className="inline-block w-5 h-5 mr-2 group-hover:animate-bounce-soft" />
                   Start Learning Now
                 </button>
                 <button
-                  onClick={() => setActiveTab("problems")}
+                  onClick={() => {
+                    setActiveTab("problems");
+                    scrollTo({
+                      top: document.getElementById("content").offsetTop,
+                      behavior: "smooth",
+                    });
+                  }}
                   className="btn-secondary group px-8 py-4 text-lg"
                 >
                   <Code className="inline-block w-5 h-5 mr-2" />
@@ -293,28 +307,11 @@ export default function Home() {
             <div className="flex gap-2 overflow-x-auto no-scrollbar">
               {(() => {
                 const baseTabs = [
-                  { id: "overview", label: "Overview", icon: Trophy },
                   { id: "resources", label: "Resources", icon: BookOpen },
                   { id: "problems", label: "Problems", icon: Code },
                 ];
 
-                const conditionalTabs = [];
-                if (activeWeek.additionalSheet) {
-                  conditionalTabs.push({
-                    id: "additional",
-                    label: "Additional Sheet",
-                    icon: FileText,
-                  });
-                }
-                if (activeWeek.lectureSession) {
-                  conditionalTabs.push({
-                    id: "lecture",
-                    label: "Lecture Session",
-                    icon: Video,
-                  });
-                }
-
-                const allTabs = [...baseTabs, ...conditionalTabs];
+                const allTabs = [...baseTabs];
 
                 return allTabs.map(tab => {
                   const Icon = tab.icon;
@@ -353,7 +350,7 @@ export default function Home() {
         </section>
 
         {/* Content Sections */}
-        <section className="py-12 md:py-20">
+        <section className="py-12 md:py-20" id="content">
           <div className="container mx-auto px-4">
             {/* Overview Tab */}
             {activeTab === "overview" && (
