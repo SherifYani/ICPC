@@ -24,6 +24,7 @@ import {
   problemsDataWeek4,
   problemsDataWeek5,
   problemsDataWeek6,
+  problemsDataWeek7,
 } from "@/data/originalWeekData";
 import ModernSelect from "@/components/ModernSelect";
 import { FileText, Video } from "lucide-react";
@@ -57,6 +58,8 @@ export default function Home() {
         return problemsDataWeek5;
       case 6:
         return problemsDataWeek6;
+      case 7:
+        return problemsDataWeek7;
       default:
         return [];
     }

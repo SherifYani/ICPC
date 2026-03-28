@@ -109,6 +109,22 @@ export const weeksData = [
     additionalSheet: "https://vjudge.net/group/level_0_training_2026",
     lectureSession: "https://www.youtube.com/@ICPCANU",
   },
+  {
+    id: 7,
+    title: "Math & Geometry",
+    description: "Solve problems using math and geometry techniques",
+    fullDescription:
+      "Explore essential math concepts for competitive programming including number theory, modular arithmetic, GCD/LCM, prime numbers, and basic 2D geometry formulas.",
+    videoCount: 5,
+    resourceCount: 6,
+    problemCount: 26,
+    resourcesLink:
+      "https://github.com/sayedmostaf/ICPC-ANU-Community-Level-0-2025/wiki/Week-07-(Math-Geometry)",
+    wikiUrl:
+      "https://raw.githubusercontent.com/wiki/sayedmostaf/ICPC-ANU-Community-Level-0-2025/Week-07-(Math-Geometry).md",
+    additionalSheet: "https://vjudge.net/group/level_0_training_2026",
+    lectureSession: "https://www.youtube.com/@ICPCANU",
+  },
 ];
 
 export const resourcesData = [
@@ -284,41 +300,41 @@ export const resourcesData = [
     link: "https://youtu.be/VWK0BOUmdBs?si=G_UEVSh2qoPALFox",
   },
 
-  // Week 02 - Conditions (UPDATED LINKS)
+  // Week 02 - Conditions
   {
     weekId: 2,
     topic: "If Statement",
     type: "Video",
     description: "Basic conditional execution",
-    link: "https://youtu.be/mzD9NIkI0A8?si=o-8eo1FPt735AZB2", // Conditions Part 1
+    link: "https://youtu.be/mzD9NIkI0A8?si=o-8eo1FPt735AZB2",
   },
   {
     weekId: 2,
     topic: "Else & Else-If",
     type: "Video",
     description: "Handling multiple branches",
-    link: "https://youtu.be/gE4VkkNLlUc?si=HYxlsg7dVynUVxYZ", // Conditions Part 2
+    link: "https://youtu.be/gE4VkkNLlUc?si=HYxlsg7dVynUVxYZ",
   },
   {
     weekId: 2,
     topic: "Nested If",
     type: "Video",
     description: "Conditions inside conditions",
-    link: "https://youtu.be/KPjjTfAD3nM?si=rSQIe89LGEwEBtxl", // Nested Conditions
+    link: "https://youtu.be/KPjjTfAD3nM?si=rSQIe89LGEwEBtxl",
   },
   {
     weekId: 2,
     topic: "Switch Case",
     type: "Video",
     description: "Cleaner alternative for multiple equality checks",
-    link: "https://youtu.be/-MTeqw7gZf0?si=KxZ8xzByqj7dke9Y", // Switch-Case Statements
+    link: "https://youtu.be/-MTeqw7gZf0?si=KxZ8xzByqj7dke9Y",
   },
   {
     weekId: 2,
     topic: "Logical Operators",
     type: "Video",
     description: "AND, OR, NOT in depth",
-    link: "https://youtu.be/tGnGFR_HMQw?si=l9WvEMOUXDZayAK6", // Logical Operators
+    link: "https://youtu.be/tGnGFR_HMQw?si=l9WvEMOUXDZayAK6",
   },
   {
     weekId: 2,
@@ -328,41 +344,41 @@ export const resourcesData = [
     link: "https://sayedmostaf.github.io/ICPC-ANU-Community-Level-0-2025/week-2/lecture/week2-slides.html",
   },
 
-  // Week 03 - Loops (UPDATED LINKS)
+  // Week 03 - Loops
   {
     weekId: 3,
     topic: "While Loop",
     type: "Video",
     description: "Entry-controlled looping",
-    link: "https://youtu.be/9O8u7-0TCfM?si=5tpJYA7RtBPWyvEf", // While loops
+    link: "https://youtu.be/9O8u7-0TCfM?si=5tpJYA7RtBPWyvEf",
   },
   {
     weekId: 3,
     topic: "Do-While Loop",
     type: "Video",
     description: "Exit-controlled looping",
-    link: "https://youtu.be/010PbHburKk?si=F2-ke46tutc8RgpL", // do-while loops
+    link: "https://youtu.be/010PbHburKk?si=F2-ke46tutc8RgpL",
   },
   {
     weekId: 3,
     topic: "For Loop",
     type: "Video",
     description: "Count-controlled loops",
-    link: "https://youtu.be/Y__kU86xG4c?si=fv-W2-O3v9AghaKi", // For loops
+    link: "https://youtu.be/Y__kU86xG4c?si=fv-W2-O3v9AghaKi",
   },
   {
     weekId: 3,
     topic: "Nested Loops",
     type: "Video",
     description: "Loops inside loops with examples",
-    link: "https://youtu.be/H_-x8g1TWJs?si=Fa00WdoCAxU7VXxc", // Nested loops
+    link: "https://youtu.be/H_-x8g1TWJs?si=Fa00WdoCAxU7VXxc",
   },
   {
     weekId: 3,
     topic: "Break & Continue",
     type: "Video",
     description: "Controlling loop flow",
-    link: "https://youtu.be/ngXQm9LnxTM?si=yjwU1KLvtJPmfgiV", // Continue & break
+    link: "https://youtu.be/ngXQm9LnxTM?si=yjwU1KLvtJPmfgiV",
   },
   {
     weekId: 3,
@@ -372,34 +388,34 @@ export const resourcesData = [
     link: "https://sayedmostaf.github.io/ICPC-ANU-Community-Level-0-2025/week-3/lecture/week3-slides.html",
   },
 
-  // Week 04 - Arrays (UPDATED LINKS)
+  // Week 04 - Arrays
   {
     weekId: 4,
     topic: "1D Arrays Declaration",
     type: "Video",
     description: "Creating and initializing arrays",
-    link: "https://youtu.be/SXhyiLLERsA?si=JIlWxXyBSy83p2UV", // 1D Arrays
+    link: "https://youtu.be/SXhyiLLERsA?si=JIlWxXyBSy83p2UV",
   },
   {
     weekId: 4,
     topic: "Array Input/Output",
     type: "Video",
     description: "Reading and printing array elements",
-    link: "https://youtu.be/M2bHVI0iBRU?si=__lvVPhSXom4kBFi", // Practice on Arrays (covers I/O)
+    link: "https://youtu.be/M2bHVI0iBRU?si=__lvVPhSXom4kBFi",
   },
   {
     weekId: 4,
     topic: "Array Operations",
     type: "Video",
     description: "Sum, max, min, reverse",
-    link: "https://youtu.be/M2bHVI0iBRU?si=__lvVPhSXom4kBFi", // Practice on Arrays
+    link: "https://youtu.be/M2bHVI0iBRU?si=__lvVPhSXom4kBFi",
   },
   {
     weekId: 4,
     topic: "2D Arrays",
     type: "Video",
     description: "Matrices and multi-dimensional arrays",
-    link: "https://youtu.be/OZfue6NBNBk?si=Qikd1QTJUJuF9rug", // 2D Arrays
+    link: "https://youtu.be/OZfue6NBNBk?si=Qikd1QTJUJuF9rug",
   },
   {
     weekId: 4,
@@ -408,6 +424,7 @@ export const resourcesData = [
     description: "Full slides covering array concepts",
     link: "https://sayedmostaf.github.io/ICPC-ANU-Community-Level-0-2025/week-4/lecture/week4-slides.html",
   },
+
   // Week 05 - Strings
   {
     weekId: 5,
@@ -462,33 +479,35 @@ export const resourcesData = [
     description: "Complete lecture slides for Week 05",
     link: "https://sayedmostaf.github.io/ICPC-ANU-Community-Level-0-2025/week-5/lecture/week5-slides.html",
   },
-  // Week 06 - Functions (UPDATED LINKS)
+
+  // Week 06 - Functions (FIXED: removed duplicate descriptions)
   {
     weekId: 6,
     topic: "13 Programming 4kids - Functions 1 - Intro",
     type: "Video",
-    description: "Why functions? Code reusability and organization",
+    description: "Introduction to functions: why we use them and basic syntax",
     link: "https://www.youtube.com/watch?v=z61hvizsrZs",
   },
   {
     weekId: 6,
     topic: "13 Programming 4kids - Functions 2 - Practice",
     type: "Video",
-    description: "Why functions? Code reusability and organization",
-    link: "https://youtu.be/ksh0QLTaWt0?si=W4gFmJMfCJUbcW5p",
+    description: "Hands-on practice writing and calling functions",
+    link: "https://youtu.be/ksh0QLTaWt0?si=W4gFmJCfCJUbcW5p",
   },
   {
     weekId: 6,
     topic: "13 Programming 4kids - Functions 3 - Homework",
     type: "Video",
-    description: "Why functions? Code reusability and organization",
+    description: "Homework problems to reinforce function concepts",
     link: "https://youtu.be/Lu3z4rfU-2s?si=DUzcWCMzxjoNw5iQ",
   },
   {
     weekId: 6,
     topic: "algorithm c++",
     type: "Video",
-    description: "Why functions? Code reusability and organization",
+    description:
+      "Overview of the C++ <algorithm> header and built-in utilities",
     link: "https://www.youtube.com/watch?v=ZIYx0mmxuxs",
   },
   {
@@ -558,16 +577,14 @@ export const resourcesData = [
     weekId: 6,
     topic: "C++ Function Reference",
     type: "Documentation",
-    description:
-      "Official cplusplus.com reference for std::string class and methods",
+    description: "Official cplusplus.com tutorial on functions",
     link: "https://cplusplus.com/doc/tutorial/functions/",
   },
   {
     weekId: 6,
     topic: "C++ Algorithm Reference",
     type: "Documentation",
-    description:
-      "Official cplusplus.com reference for std::string class and methods",
+    description: "Official cplusplus.com reference for the <algorithm> header",
     link: "https://cplusplus.com/reference/algorithm/",
   },
   {
@@ -576,6 +593,63 @@ export const resourcesData = [
     type: "Slides",
     description: "Complete lecture slides for Week 06",
     link: "https://sayedmostaf.github.io/ICPC-ANU-Community-Level-0-2025/week-6/lecture/week6-slides.html",
+  },
+
+  // Week 07 - Number Theory (Corrected)
+  {
+    weekId: 7,
+    topic: "Number Theory Part 1 - Modular Arithmetic",
+    type: "Video",
+    description:
+      "Introduction to modular arithmetic with visual explanations and competitive programming applications",
+    link: "https://youtu.be/Scw9LAtuwvg?si=mj44ViSIZJ7GFwU-",
+  },
+  {
+    weekId: 7,
+    topic: "Number Theory Part 2 - Factorization",
+    type: "Video",
+    description:
+      "Understanding number factorization: breaking numbers into prime factors with animated visual intuition",
+    link: "https://youtu.be/JS-0DOGrNmo?si=qctnuH7ZadaH9DyS",
+  },
+  {
+    weekId: 7,
+    topic: "Number Theory Part 3 - Prime Factorization",
+    type: "Video",
+    description:
+      "Deep dive into prime factorization algorithms and efficient implementation for competitive programming",
+    link: "https://youtu.be/O4WljSHt27w?si=N7vB-rBdl8GRiOx0",
+  },
+  {
+    weekId: 7,
+    topic: "Number Theory Part 4 - GCD & Euclidean Algorithm",
+    type: "Video",
+    description:
+      "Master the Euclidean algorithm for computing GCD with practice problems and competitive programming applications",
+    link: "https://youtu.be/DWaor1rGxog?si=MVEjeEg8ZlsmzeSA",
+  },
+  {
+    weekId: 7,
+    topic: "Number Theory Part 5 - LCM",
+    type: "Video",
+    description:
+      "Understanding Least Common Multiple with visual intuition and problem-solving techniques",
+    link: "https://youtu.be/si-Tk_C0nIQ?si=C3sSzT1XCsz2LxMI",
+  },
+  {
+    weekId: 7,
+    topic: "C++ cmath Reference",
+    type: "Documentation",
+    description:
+      "Official cplusplus.com reference for the <cmath> library functions",
+    link: "https://cplusplus.com/reference/cmath/",
+  },
+  {
+    weekId: 7,
+    topic: "Math & Geometry Slides",
+    type: "Slides",
+    description: "Complete lecture slides for Week 07",
+    link: "https://sayedmostaf.github.io/ICPC-ANU-Community-Level-0-2025/week-7/lecture/week7-slides.html",
   },
 ];
 
@@ -1062,9 +1136,9 @@ export const problemsDataWeek4 = [
     link: "https://codeforces.com/group/MWSDmqGsZm/contest/219774/problem/Z",
   },
 ];
+
 // === PROBLEMS DATA (Week 05 - Strings) ===
 export const problemsDataWeek5 = [
-  // Source: https://codeforces.com/group/MWSDmqGsZm/contest/219856
   {
     id: "A",
     name: "Create A New String",
@@ -1225,7 +1299,6 @@ export const problemsDataWeek5 = [
 
 // === PROBLEMS DATA (Week 06 - Functions) ===
 export const problemsDataWeek6 = [
-  // Source: https://codeforces.com/group/MWSDmqGsZm/contest/223205
   {
     id: "A",
     name: "Add",
@@ -1315,5 +1388,165 @@ export const problemsDataWeek6 = [
     name: "Five in One",
     difficulty: 3,
     link: "https://codeforces.com/group/MWSDmqGsZm/contest/223205/problem/O",
+  },
+];
+
+// === PROBLEMS DATA (Week 07 - Math & Geometry) ===
+export const problemsDataWeek7 = [
+  {
+    id: "A",
+    name: "Power Of Two",
+    difficulty: 1,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/A",
+  },
+  {
+    id: "B",
+    name: "Prime checking",
+    difficulty: 1,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/B",
+  },
+  {
+    id: "C",
+    name: "Sum of Range",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/C",
+  },
+  {
+    id: "D",
+    name: "Xor",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/D",
+  },
+  {
+    id: "E",
+    name: "Maximum Distinct Numbers",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/E",
+  },
+  {
+    id: "F",
+    name: "Multiplication of Matrices",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/F",
+  },
+  {
+    id: "G",
+    name: "Summation of its divisors",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/G",
+  },
+  {
+    id: "H",
+    name: "GCD",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/H",
+  },
+  {
+    id: "I",
+    name: "Divisability",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/I",
+  },
+  {
+    id: "J",
+    name: "Prime Factors",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/J",
+  },
+  {
+    id: "K",
+    name: "Combination and Permutation",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/K",
+  },
+  {
+    id: "L",
+    name: "Pascal Triangle",
+    difficulty: 3,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/L",
+  },
+  {
+    id: "M",
+    name: "Divisible",
+    difficulty: 3,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/M",
+  },
+  {
+    id: "N",
+    name: "Convert to Base",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/N",
+  },
+  {
+    id: "O",
+    name: "Big Add and Multiply",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/O",
+  },
+  {
+    id: "P",
+    name: "Factorial Digits",
+    difficulty: 3,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/P",
+  },
+  {
+    id: "Q",
+    name: "Product",
+    difficulty: 3,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/Q",
+  },
+  {
+    id: "R",
+    name: "Distance points",
+    difficulty: 3,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/R",
+  },
+  {
+    id: "S",
+    name: "Is Triangle",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/S",
+  },
+  {
+    id: "T",
+    name: "Circle Task",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/T",
+  },
+  {
+    id: "U",
+    name: "Straight Line",
+    difficulty: 3,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/U",
+  },
+  {
+    id: "V",
+    name: "Two Lines",
+    difficulty: 3,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/V",
+  },
+  {
+    id: "W",
+    name: "Circles",
+    difficulty: 3,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/W",
+  },
+  {
+    id: "X",
+    name: "Rectangle",
+    difficulty: 3,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/X",
+  },
+  {
+    id: "Y",
+    name: "Common Area",
+    difficulty: 4,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/Y",
+  },
+  {
+    id: "Z",
+    name: "Geometry Test",
+    difficulty: 4,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/Z",
   },
 ];
