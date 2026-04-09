@@ -125,6 +125,22 @@ export const weeksData = [
     additionalSheet: "https://vjudge.net/group/level_0_training_2026",
     lectureSession: "https://www.youtube.com/@ICPCANU",
   },
+  {
+    id: 8,
+    title: "Time Complexity",
+    description: "Learn to analyze algorithm efficiency",
+    fullDescription:
+      "Master the fundamentals of time complexity analysis. Learn Big O notation, how to analyze loops and recursive functions, and understand why algorithm efficiency matters in competitive programming.",
+    videoCount: 2,
+    resourceCount: 4,
+    problemCount: 26,
+    resourcesLink:
+      "https://github.com/sayedmostaf/ICPC-ANU-Community-Level-0-2025/wiki/Week-08-(Time-Complexity)",
+    wikiUrl:
+      "https://raw.githubusercontent.com/wiki/sayedmostaf/ICPC-ANU-Community-Level-0-2025/Week-08-(Time-Complexity).md",
+    additionalSheet: "https://vjudge.net/group/level_0_training_2026",
+    lectureSession: "https://www.youtube.com/@ICPCANU",
+  },
 ];
 
 export const resourcesData = [
@@ -650,6 +666,36 @@ export const resourcesData = [
     type: "Slides",
     description: "Complete lecture slides for Week 07",
     link: "https://sayedmostaf.github.io/ICPC-ANU-Community-Level-0-2025/week-7/lecture/week7-slides.html",
+  }, 
+  
+  // Week 08 - Time Complexity
+  {
+    weekId: 8,
+    topic: "Introduction to Time Complexity",
+    type: "Video",
+    description: "Understanding algorithm efficiency and Big O notation basics",
+    link: "https://youtu.be/hYalOGs1_Og?si=mYK-uYy4x5x1B4Vr",
+  },
+  {
+    weekId: 8,
+    topic: "Analyzing Algorithm Complexity",
+    type: "Video",
+    description: "Learn to calculate and compare time complexity of different approaches",
+    link: "https://youtu.be/dZiZ0zsMBNQ?si=dGGpDnkHFipU0Na7",
+  },
+  {
+    weekId: 8,
+    topic: "USACO Guide: Time Complexity",
+    type: "Documentation",
+    description: "Interactive guide on time complexity with C++ examples",
+    link: "https://usaco.guide/bronze/time-comp?lang=cpp",
+  },
+  {
+    weekId: 8,
+    topic: "Time Complexity Slides",
+    type: "Slides",
+    description: "Complete lecture slides for Week 08",
+    link: "https://sayedmostaf.github.io/ICPC-ANU-Community-Level-0-2025/week-8/lecture/week8-slides.html",
   },
 ];
 
@@ -1548,5 +1594,165 @@ export const problemsDataWeek7 = [
     name: "Geometry Test",
     difficulty: 4,
     link: "https://codeforces.com/group/MWSDmqGsZm/contest/223338/problem/Z",
+  },
+];
+
+// === PROBLEMS DATA (Week 08 - Time Complexity) ===
+export const problemsDataWeek8 = [
+  {
+    id: "A",
+    name: "Palindromes Replace",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/A",
+  },
+  {
+    id: "B",
+    name: "Watermelon 1",
+    difficulty: 1,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/B",
+  },
+  {
+    id: "C",
+    name: "Koko And The Transformation",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/C",
+  },
+  {
+    id: "D",
+    name: "Bear and Big Brother",
+    difficulty: 1,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/D",
+  },
+  {
+    id: "E",
+    name: "George and Accommodation",
+    difficulty: 1,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/E",
+  },
+  {
+    id: "F",
+    name: "Fox And Snake",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/F",
+  },
+  {
+    id: "G",
+    name: "Magnets 1",
+    difficulty: 1,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/G",
+  },
+  {
+    id: "H",
+    name: "Presents 1",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/H",
+  },
+  {
+    id: "I",
+    name: "Colorful Stones (Simplified Edition) 1",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/I",
+  },
+  {
+    id: "J",
+    name: "Lucky Division 1",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/J",
+  },
+  {
+    id: "K",
+    name: "Prime Fibonacci",
+    difficulty: 3,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/K",
+  },
+  {
+    id: "L",
+    name: "Sereja and Dima",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/L",
+  },
+  {
+    id: "M",
+    name: "The New Year: Meeting Friends",
+    difficulty: 1,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/M",
+  },
+  {
+    id: "N",
+    name: "Cakeminator 1",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/N",
+  },
+  {
+    id: "O",
+    name: "Free Ice Cream",
+    difficulty: 1,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/O",
+  },
+  {
+    id: "P",
+    name: "Police Recruits",
+    difficulty: 1,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/P",
+  },
+  {
+    id: "Q",
+    name: "Night at the Museum",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/Q",
+  },
+  {
+    id: "R",
+    name: "Arrival of the General 1",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/R",
+  },
+  {
+    id: "S",
+    name: "Good Number",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/S",
+  },
+  {
+    id: "T",
+    name: "Helpful Maths 1",
+    difficulty: 1,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/T",
+  },
+  {
+    id: "U",
+    name: "Ilya and Bank Account 1",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/U",
+  },
+  {
+    id: "V",
+    name: "Is it rated?",
+    difficulty: 1,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/V",
+  },
+  {
+    id: "W",
+    name: "Mahmoud and Longest Uncommon Subsequence",
+    difficulty: 3,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/W",
+  },
+  {
+    id: "X",
+    name: "Panoramix's Prediction 1",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/X",
+  },
+  {
+    id: "Y",
+    name: "Team Olympiad",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/Y",
+  },
+  {
+    id: "Z",
+    name: "Decoding",
+    difficulty: 2,
+    link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/Z",
   },
 ];
