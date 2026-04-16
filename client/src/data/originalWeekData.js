@@ -141,6 +141,22 @@ export const weeksData = [
     additionalSheet: "https://vjudge.net/group/level_0_training_2026",
     lectureSession: "https://www.youtube.com/@ICPCANU",
   },
+  {
+    id: 9,
+    title: "Data Structures & STL1",
+    description: "Master C++ STL1 containers and fundamental data structures",
+    fullDescription:
+      "Learn the C++ Standard Template Library (STL1) and essential data structures. Topics include std::array, std::vector, std::pair, sorting algorithms, and practical applications for competitive programming problems.",
+    videoCount: 0,
+    resourceCount: 6,
+    problemCount: 14,
+    resourcesLink:
+      "https://github.com/sayedmostaf/ICPC-ANU-Community-Level-0-2025/wiki/Week-09-(Data-Structures-STL)",
+    wikiUrl:
+      "https://raw.githubusercontent.com/wiki/sayedmostaf/ICPC-ANU-Community-Level-0-2025/Week-09-(Data-Structures-STL).md",
+    additionalSheet: "https://vjudge.net/group/level_0_training_2026",
+    lectureSession: "https://www.youtube.com/@ICPCANU",
+  },
 ];
 
 export const resourcesData = [
@@ -666,8 +682,8 @@ export const resourcesData = [
     type: "Slides",
     description: "Complete lecture slides for Week 07",
     link: "https://sayedmostaf.github.io/ICPC-ANU-Community-Level-0-2025/week-7/lecture/week7-slides.html",
-  }, 
-  
+  },
+
   // Week 08 - Time Complexity
   {
     weekId: 8,
@@ -680,7 +696,8 @@ export const resourcesData = [
     weekId: 8,
     topic: "Analyzing Algorithm Complexity",
     type: "Video",
-    description: "Learn to calculate and compare time complexity of different approaches",
+    description:
+      "Learn to calculate and compare time complexity of different approaches",
     link: "https://youtu.be/dZiZ0zsMBNQ?si=dGGpDnkHFipU0Na7",
   },
   {
@@ -696,6 +713,52 @@ export const resourcesData = [
     type: "Slides",
     description: "Complete lecture slides for Week 08",
     link: "https://sayedmostaf.github.io/ICPC-ANU-Community-Level-0-2025/week-8/lecture/week8-slides.html",
+  },
+  // Week 09 - Data Structures & STL1
+  {
+    weekId: 9,
+    topic: "C++ Standard Template Library (STL1) Overview",
+    type: "Article",
+    description:
+      "TopCoder guide to power up C++ with STL containers and algorithms",
+    link: "https://www.topcoder.com/thrive/articles/Power%20up%20C++%20with%20the%20Standard%20Template%20Library%20Part%20One",
+  },
+  {
+    weekId: 9,
+    topic: "Introduction to Data Structures",
+    type: "Documentation",
+    description:
+      "USACO Guide introduction to fundamental data structures in C++",
+    link: "https://usaco.guide/bronze/intro-ds?lang=cpp",
+  },
+  {
+    weekId: 9,
+    topic: "C++ Array Reference",
+    type: "Documentation",
+    description: "Official cplusplus.com reference for std::array container",
+    link: "https://cplusplus.com/reference/array/array/",
+  },
+  {
+    weekId: 9,
+    topic: "C++ Vector Reference",
+    type: "Documentation",
+    description:
+      "Official cplusplus.com reference for std::vector dynamic array",
+    link: "https://cplusplus.com/reference/vector/vector/",
+  },
+  {
+    weekId: 9,
+    topic: "C++ Pair Reference",
+    type: "Documentation",
+    description: "Official cplusplus.com reference for std::pair utility",
+    link: "https://cplusplus.com/reference/utility/pair/pair/",
+  },
+  {
+    weekId: 9,
+    topic: "Data Structures & STL1 Slides",
+    type: "Slides",
+    description: "Complete lecture slides for Week 09",
+    link: "https://sayedmostaf.github.io/ICPC-ANU-Community-Level-0-2025/week-9/lecture/week9-slides.html",
   },
 ];
 
@@ -1754,5 +1817,93 @@ export const problemsDataWeek8 = [
     name: "Decoding",
     difficulty: 2,
     link: "https://codeforces.com/group/MWSDmqGsZm/contest/223206/problem/Z",
+  },
+];
+
+// === PROBLEMS DATA (Week 08 - Vectors, pairs and structs) ===
+export const problemsDataWeek9 = [
+  {
+    id: "A",
+    name: "Count numbers",
+    difficulty: 2,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/262795/problem/A",
+  },
+  {
+    id: "B",
+    name: "Count characters",
+    difficulty: 2,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/262795/problem/B",
+  },
+  {
+    id: "C",
+    name: "Sort the array",
+    difficulty: 2,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/262795/problem/C",
+  },
+  {
+    id: "D",
+    name: "The first missing number",
+    difficulty: 2,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/262795/problem/D",
+  },
+  {
+    id: "E",
+    name: "Range sum query",
+    difficulty: 3,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/262795/problem/E",
+  },
+  {
+    id: "F",
+    name: "update range",
+    difficulty: 3,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/262795/problem/F",
+  },
+  {
+    id: "G",
+    name: "range sum 2d",
+    difficulty: 3,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/262795/problem/G",
+  },
+  {
+    id: "H",
+    name: "count a's",
+    difficulty: 3,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/262795/problem/H",
+  },
+  {
+    id: "I",
+    name: "Using vector",
+    difficulty: 3,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/262795/problem/I",
+  },
+  {
+    id: "J",
+    name: "The Grades",
+    difficulty: 3,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/262795/problem/J",
+  },
+  {
+    id: "K",
+    name: "Sorting pairs",
+    difficulty: 2,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/262795/problem/K",
+  },
+  {
+    id: "L",
+    name: "Diverse Team",
+    difficulty: 3,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/262795/problem/L",
+  },
+  {
+    id: "M",
+    name: "distinct elements",
+    difficulty: 3,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/262795/problem/M",
+  },
+  {
+    id: "N",
+    name: "Merge Intervals",
+    difficulty: 2,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/262795/problem/N",
   },
 ];
