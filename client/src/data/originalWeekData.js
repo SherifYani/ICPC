@@ -730,6 +730,7 @@ export const resourcesData = [
     description: "Complete lecture slides for Week 08",
     link: "https://sayedmostaf.github.io/ICPC-ANU-Community-Level-0-2025/week-8/lecture/week8-slides.html",
   },
+
   // Week 09 - Data Structures & STL1
   {
     weekId: 9,
@@ -776,6 +777,87 @@ export const resourcesData = [
     description: "Complete lecture slides for Week 09",
     link: "https://sayedmostaf.github.io/ICPC-ANU-Community-Level-0-2025/week-9/lecture/week9-slides.html",
   }, // Week 10 - Stacks, Queues & Deques
+  {
+    weekId: 10,
+    topic: "Introduction to Stacks",
+    type: "Video",
+    description:
+      "Learn stack fundamentals: LIFO principle, push/pop operations, and real-world applications",
+    link: "https://youtu.be/cBmy4x0G0G8?si=cdwIlCvWWwBpqhal",
+  },
+  {
+    weekId: 10,
+    topic: "Stack Implementation & Practice",
+    type: "Video",
+    description:
+      "Hands-on coding: implementing stacks and solving classic problems like parentheses matching",
+    link: "https://youtu.be/Z0nYHbhqwgU?si=6kGNwBGEsQ_4d82U",
+  },
+  {
+    weekId: 10,
+    topic: "Introduction to Queues",
+    type: "Video",
+    description:
+      "Master queue basics: FIFO principle, enqueue/dequeue, and use cases in BFS and scheduling",
+    link: "https://youtu.be/PJHcOVmkRbw?si=MEbx_iImoT5EG8j7",
+  },
+  {
+    weekId: 10,
+    topic: "Deque & Advanced Queue Techniques",
+    type: "Video",
+    description:
+      "Double-ended queues, sliding window problems, and monotonic queue patterns",
+    link: "https://youtu.be/vgdHq0K137M?si=JPu4pfl9DU1m522J",
+  },
+  {
+    weekId: 10,
+    topic: "C++ Queue Reference",
+    type: "Documentation",
+    description:
+      "Official cplusplus.com reference for std::queue container adapter",
+    link: "https://cplusplus.com/reference/queue/queue/",
+  },
+  {
+    weekId: 10,
+    topic: "C++ Stack Reference",
+    type: "Documentation",
+    description:
+      "Official cplusplus.com reference for std::stack container adapter",
+    link: "https://cplusplus.com/reference/stack/stack/",
+  },
+  {
+    weekId: 10,
+    topic: "C++ Deque Reference",
+    type: "Documentation",
+    description:
+      "Official cplusplus.com reference for std::deque double-ended queue",
+    link: "https://cplusplus.com/reference/deque/deque/",
+  },
+  {
+    weekId: 10,
+    topic: "Introduction to Monotonic Stack",
+    type: "Article",
+    description:
+      "GeeksforGeeks guide to monotonic stacks: theory, patterns, and competitive programming applications",
+    link: "https://www.geeksforgeeks.org/dsa/introduction-to-monotonic-stack-2/",
+  },
+  {
+    weekId: 10,
+    topic: "Introduction to Monotonic Queues",
+    type: "Article",
+    description:
+      "GeeksforGeeks guide to monotonic queues: sliding window optimization and problem-solving strategies",
+    link: "https://www.geeksforgeeks.org/dsa/introduction-to-monotonic-queues/",
+  },
+  {
+    weekId: 10,
+    topic: "Stacks & Queues Slides",
+    type: "Slides",
+    description: "Complete lecture slides for Week 10",
+    link: "https://sayedmostaf.github.io/ICPC-ANU-Community-Level-0-2025/week-10/lecture/week10-slides.html",
+  },
+
+  // Week 10 - Stacks, Queues & Deques
   {
     weekId: 10,
     topic: "Introduction to Stacks",
@@ -1989,7 +2071,6 @@ export const problemsDataWeek9 = [
     difficulty: 2,
     link: "https://codeforces.com/group/c3FDl9EUi9/contest/262795/problem/N",
   },
-
   // Practice Sheet
   {
     id: "PA",
@@ -2005,7 +2086,7 @@ export const problemsDataWeek9 = [
   },
   {
     id: "PC",
-    name: "Letter 1",
+    name: "Letter",
     difficulty: 2,
     link: "https://codeforces.com/group/3nQaj5GMG5/contest/372026/problem/C",
   },
@@ -2084,7 +2165,7 @@ export const problemsDataWeek10 = [
     difficulty: 3,
     link: "https://codeforces.com/group/c3FDl9EUi9/contest/263096/problem/J",
   },
-  // Practice Sheet (Stacks & Queues Practice)
+  // Practice Sheet - (Stacks & Queues Practice)
   {
     id: "PA",
     name: "Regular Bracket Sequence 1",

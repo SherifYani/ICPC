@@ -14,7 +14,7 @@
     "allowImportingTsExtensions": true,
     "forceConsistentCasingInFileNames": true,
     "moduleResolution": "bundler",
-    "baseUrl": ".",
+    // "baseUrl": ".",
     "types": ["node"],
     "paths": {
       "@/*": ["./client/src/*"],
