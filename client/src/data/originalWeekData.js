@@ -157,6 +157,22 @@ export const weeksData = [
     additionalSheet: "https://vjudge.net/group/level_0_training_2026",
     lectureSession: "https://www.youtube.com/@ICPCANU",
   },
+  {
+    id: 10,
+    title: "Stacks, Queues & Deques",
+    description: "Master linear data structures for efficient problem-solving",
+    fullDescription:
+      "Learn stack (LIFO) and queue (FIFO) data structures, their C++ STL implementations (std::stack, std::queue, std::deque), and advanced patterns like monotonic stacks/queues for sliding window optimization and competitive programming problems.",
+    videoCount: 4,
+    resourceCount: 10,
+    problemCount: 0,
+    resourcesLink:
+      "https://github.com/sayedmostaf/ICPC-ANU-Community-Level-0-2025/wiki/Week-10-(Stacks-Queues-Deques)",
+    wikiUrl:
+      "https://raw.githubusercontent.com/wiki/sayedmostaf/ICPC-ANU-Community-Level-0-2025/Week-10-(Stacks-Queues-Deques).md",
+    additionalSheet: "https://vjudge.net/group/level_0_training_2026",
+    lectureSession: "https://www.youtube.com/@ICPCANU",
+  },
 ];
 
 export const resourcesData = [
@@ -714,6 +730,7 @@ export const resourcesData = [
     description: "Complete lecture slides for Week 08",
     link: "https://sayedmostaf.github.io/ICPC-ANU-Community-Level-0-2025/week-8/lecture/week8-slides.html",
   },
+
   // Week 09 - Data Structures & STL1
   {
     weekId: 9,
@@ -759,6 +776,87 @@ export const resourcesData = [
     type: "Slides",
     description: "Complete lecture slides for Week 09",
     link: "https://sayedmostaf.github.io/ICPC-ANU-Community-Level-0-2025/week-9/lecture/week9-slides.html",
+  },
+
+  // Week 10 - Stacks, Queues & Deques
+  {
+    weekId: 10,
+    topic: "Introduction to Stacks",
+    type: "Video",
+    description:
+      "Learn stack fundamentals: LIFO principle, push/pop operations, and real-world applications",
+    link: "https://youtu.be/cBmy4x0G0G8?si=cdwIlCvWWwBpqhal",
+  },
+  {
+    weekId: 10,
+    topic: "Stack Implementation & Practice",
+    type: "Video",
+    description:
+      "Hands-on coding: implementing stacks and solving classic problems like parentheses matching",
+    link: "https://youtu.be/Z0nYHbhqwgU?si=6kGNwBGEsQ_4d82U",
+  },
+  {
+    weekId: 10,
+    topic: "Introduction to Queues",
+    type: "Video",
+    description:
+      "Master queue basics: FIFO principle, enqueue/dequeue, and use cases in BFS and scheduling",
+    link: "https://youtu.be/PJHcOVmkRbw?si=MEbx_iImoT5EG8j7",
+  },
+  {
+    weekId: 10,
+    topic: "Deque & Advanced Queue Techniques",
+    type: "Video",
+    description:
+      "Double-ended queues, sliding window problems, and monotonic queue patterns",
+    link: "https://youtu.be/vgdHq0K137M?si=JPu4pfl9DU1m522J",
+  },
+  {
+    weekId: 10,
+    topic: "C++ Queue Reference",
+    type: "Documentation",
+    description:
+      "Official cplusplus.com reference for std::queue container adapter",
+    link: "https://cplusplus.com/reference/queue/queue/",
+  },
+  {
+    weekId: 10,
+    topic: "C++ Stack Reference",
+    type: "Documentation",
+    description:
+      "Official cplusplus.com reference for std::stack container adapter",
+    link: "https://cplusplus.com/reference/stack/stack/",
+  },
+  {
+    weekId: 10,
+    topic: "C++ Deque Reference",
+    type: "Documentation",
+    description:
+      "Official cplusplus.com reference for std::deque double-ended queue",
+    link: "https://cplusplus.com/reference/deque/deque/",
+  },
+  {
+    weekId: 10,
+    topic: "Introduction to Monotonic Stack",
+    type: "Article",
+    description:
+      "GeeksforGeeks guide to monotonic stacks: theory, patterns, and competitive programming applications",
+    link: "https://www.geeksforgeeks.org/dsa/introduction-to-monotonic-stack-2/",
+  },
+  {
+    weekId: 10,
+    topic: "Introduction to Monotonic Queues",
+    type: "Article",
+    description:
+      "GeeksforGeeks guide to monotonic queues: sliding window optimization and problem-solving strategies",
+    link: "https://www.geeksforgeeks.org/dsa/introduction-to-monotonic-queues/",
+  },
+  {
+    weekId: 10,
+    topic: "Stacks & Queues Slides",
+    type: "Slides",
+    description: "Complete lecture slides for Week 10",
+    link: "https://sayedmostaf.github.io/ICPC-ANU-Community-Level-0-2025/week-10/lecture/week10-slides.html",
   },
 ];
 
@@ -1853,18 +1951,6 @@ export const problemsDataWeek9 = [
     link: "https://codeforces.com/group/c3FDl9EUi9/contest/262795/problem/E",
   },
   {
-    id: "F",
-    name: "update range",
-    difficulty: 3,
-    link: "https://codeforces.com/group/c3FDl9EUi9/contest/262795/problem/F",
-  },
-  {
-    id: "G",
-    name: "range sum 2d",
-    difficulty: 3,
-    link: "https://codeforces.com/group/c3FDl9EUi9/contest/262795/problem/G",
-  },
-  {
     id: "H",
     name: "count a's",
     difficulty: 3,
@@ -1905,5 +1991,130 @@ export const problemsDataWeek9 = [
     name: "Merge Intervals",
     difficulty: 2,
     link: "https://codeforces.com/group/c3FDl9EUi9/contest/262795/problem/N",
+  },
+  {
+    id: "PA",
+    name: "Alphabetic Removals",
+    difficulty: 2,
+    link: "https://codeforces.com/group/3nQaj5GMG5/contest/372026/problem/A",
+  },
+  {
+    id: "PB",
+    name: "Andryusha and Socks",
+    difficulty: 2,
+    link: "https://codeforces.com/group/3nQaj5GMG5/contest/372026/problem/B",
+  },
+  {
+    id: "PC",
+    name: "Letter",
+    difficulty: 2,
+    link: "https://codeforces.com/group/3nQaj5GMG5/contest/372026/problem/C",
+  },
+  {
+    id: "PD",
+    name: "Array Stabilization",
+    difficulty: 2,
+    link: "https://codeforces.com/group/3nQaj5GMG5/contest/372026/problem/D",
+  },
+  {
+    id: "PE",
+    name: "Sereja and Suffixes",
+    difficulty: 3,
+    link: "https://codeforces.com/group/3nQaj5GMG5/contest/372026/problem/E",
+  },
+];
+
+// === PROBLEMS DATA (Week 10 - Stacks, Queues & Deques) ===
+export const problemsDataWeek10 = [
+  {
+    id: "A",
+    name: "String Functions",
+    difficulty: 2,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/263096/problem/A",
+  },
+  {
+    id: "B",
+    name: "binary search STL",
+    difficulty: 2,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/263096/problem/B",
+  },
+  {
+    id: "C",
+    name: "permutations",
+    difficulty: 2,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/263096/problem/C",
+  },
+  {
+    id: "D",
+    name: "Stack",
+    difficulty: 2,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/263096/problem/D",
+  },
+  {
+    id: "E",
+    name: "Queue",
+    difficulty: 2,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/263096/problem/E",
+  },
+  {
+    id: "F",
+    name: "Deque",
+    difficulty: 2,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/263096/problem/F",
+  },
+  {
+    id: "G",
+    name: "priority queue maximum",
+    difficulty: 3,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/263096/problem/G",
+  },
+  {
+    id: "H",
+    name: "priority queue minimum",
+    difficulty: 3,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/263096/problem/H",
+  },
+  {
+    id: "I",
+    name: "Interesting drink",
+    difficulty: 3,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/263096/problem/I",
+  },
+  {
+    id: "J",
+    name: "Next Element",
+    difficulty: 3,
+    link: "https://codeforces.com/group/c3FDl9EUi9/contest/263096/problem/J",
+  },
+  // Practice Sheet - (Stacks & Queues Practice)
+  {
+    id: "PA",
+    name: "Regular Bracket Sequence 1",
+    difficulty: 2,
+    link: "https://codeforces.com/group/3nQaj5GMG5/contest/373244/problem/A",
+  },
+  {
+    id: "PB",
+    name: "Tickets",
+    difficulty: 2,
+    link: "https://codeforces.com/group/3nQaj5GMG5/contest/373244/problem/B",
+  },
+  {
+    id: "PC",
+    name: "Study INTRO!",
+    difficulty: 2,
+    link: "https://codeforces.com/group/3nQaj5GMG5/contest/373244/problem/C",
+  },
+  {
+    id: "PD",
+    name: "Card Game",
+    difficulty: 3,
+    link: "https://codeforces.com/group/3nQaj5GMG5/contest/373244/problem/D",
+  },
+  {
+    id: "PE",
+    name: "Plug-in 1",
+    difficulty: 3,
+    link: "https://codeforces.com/group/3nQaj5GMG5/contest/373244/problem/E",
   },
 ];
